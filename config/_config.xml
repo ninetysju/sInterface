@@ -6,6 +6,7 @@
 	<Script file="coolbar.lua"/>
 	<Script file="errors.lua"/>
 	<Script file="filter.lua"/>
+	<Script file="loot.lua"/>
 	<Script file="minimap.lua"/>
 	<Script file="nameplates.lua"/>
 	<Script file="objectivetracker.lua"/>
