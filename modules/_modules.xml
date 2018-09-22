@@ -15,4 +15,5 @@
 	<Include file="talkinghead\_talkinghead.xml" />
 	<Include file="tooltips\_tooltips.xml" />
 	<Include file="skins\_skins.xml" />
+	<Include file="vehicleindicator\_vehicleindicator.xml" />
 </Ui>
