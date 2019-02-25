@@ -36,7 +36,7 @@ bar1:SetScale(C.actionbars.scale)
 bar2:SetScale(C.actionbars.scale)
 bar3:SetScale(C.actionbars.scale)
 bar4:SetScale(C.actionbars.scale)
-bar5:SetScale(C.actionbars.scale)
+bar5:SetScale(C.actionbars.bar5.scale)
 
 -- BAR 1
 for i = 1, NUM_ACTIONBAR_BUTTONS do

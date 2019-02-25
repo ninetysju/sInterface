@@ -3,40 +3,41 @@ local C = ns.C
 
 C["actionbars"] = {
 	enabled = true,
-	scale = 0.85,
+	scale = 1,
 
 	bar1 = { -- sInterfaceActionBar1
-		position = { "RIGHT", UIParent, "RIGHT", -(C.general.edgeSpacing*17), 120},
-		visibility = "[modifier:ctrl, modifier:alt, modifier:shift][cursor][possessbar] show; hide",
-		two_rows = true
+		position = { "CENTER", UIParent, "BOTTOM", 0, 200},
+		visibility = "show",
+		two_rows = false,
 	},
 
 	bar2 = { --sInterfaceActionBar2
-		position = { "TOPLEFT", "sInterfaceActionBar1", "BOTTOMLEFT", 0, -20},
+		position = { "TOPLEFT", "sInterfaceActionBar4", "BOTTOMLEFT", 0, -20},
 		visibility = "[modifier:ctrl, modifier:alt, modifier:shift][cursor] show; hide",
-		two_rows = true,
+		two_rows = false,
 		enabled = true,
 	},
 
 	bar3 = { --sInterfaceActionBar3
-		position = { "TOPLEFT", "sInterfaceActionBar2", "BOTTOMLEFT", 0, -20},
-		visibility = "[modifier:ctrl, modifier:alt, modifier:shift][cursor] show; hide",
-		two_rows = true,
+		position = { "BOTTOMLEFT", "sInterfaceActionBar1", "TOPLEFT", 0, 6},
+		visibility = "show",
+		two_rows = false,
 		enabled = true,
 	},
 
 	bar4 = { --sInterfaceActionBar4
-		position = { "TOPLEFT", "sInterfaceActionBar3", "BOTTOMLEFT", 0, -20},
+		position = { "TOPLEFT", "sInterfaceActionBar1", "BOTTOMLEFT", 0, -20},
 		visibility = "[modifier:ctrl, modifier:alt, modifier:shift][cursor] show; hide",
-		two_rows = true,
+		two_rows = false,
 		enabled = true,
 	},
 
 	bar5 = { --sInterfaceActionBar5
-		position = { "TOPLEFT", "sInterfaceActionBar4", "BOTTOMLEFT", 0, -20},
-		visibility = "[modifier:ctrl, modifier:alt, modifier:shift][cursor] show; hide",
-		two_rows = true,
+		position = { "BOTTOM", UIParent, "BOTTOM", 8, 8},
+		visibility = "show",
+		two_rows = false,
 		enabled = true,
+		scale = 0.8,
 	},
 
 	possessbar = { --sInterfacePossessBar

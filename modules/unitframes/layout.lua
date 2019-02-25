@@ -7,13 +7,13 @@ local oUF = ns.oUF or oUF
 local _, class = UnitClass('player')
 
 local CASTBAR_X_OFFSET = 0
-local CASTBAR_Y_OFFSET = 10
+local CASTBAR_Y_OFFSET = 0
 
 local POWER_X_OFFSET = 0
 local POWER_Y_OFFSET = 1
 
 local CLASSPOWER_X_OFFSET = 0
-local CLASSPOWER_Y_OFFSET = -8
+local CLASSPOWER_Y_OFFSET = 0
 
 local TEXT_Y_OFFSET = 6
 local TEXT_X_OFFSET = 2
@@ -494,8 +494,8 @@ local Power = function(self)
 	powerHolder:SetHeight(C.uf.size[self.unitSize].power)
 
 	local p = createStatusbar(powerHolder, C.general.texture, nil, nil, nil, 1, 1, 1, 1)
-	p:SetPoint('LEFT', (self:GetWidth()/18), 0)
-	p:SetPoint('RIGHT', -(self:GetWidth()/18), 0)
+	p:SetPoint('LEFT', 0, 0)
+	p:SetPoint('RIGHT', 0, 0)
 	p:SetPoint("TOP")
 	p:SetPoint("BOTTOM")
 
@@ -532,8 +532,8 @@ local AdditionalPower = function(self)
 	powerHolder:SetHeight(C.uf.size[self.unitSize].power)
 
 	local p = createStatusbar(powerHolder, C.general.texture, nil, nil, nil, 1, 1, 1, 1)
-	p:SetPoint('LEFT', (self:GetWidth()/18), 0)
-	p:SetPoint('RIGHT', -(self:GetWidth()/18), 0)
+	p:SetPoint('LEFT', 0, 0)
+	p:SetPoint('RIGHT', 0, 0)
 	p:SetPoint("TOP")
 	p:SetPoint("BOTTOM")
 

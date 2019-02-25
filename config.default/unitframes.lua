@@ -3,11 +3,11 @@ local C = ns.C
 
 C["uf"] = {
 	enabled = true,
-	hidePlayerFrameOoc = true,
+	hidePlayerFrameOoc = false,
 
 	-- Setting emulatePersonalResourceDisplay to true will ignore the player frame position,
 	-- instead, anchoring the player frame to the Personal Resource Display
-	emulatePersonalResourceDisplay = true,
+	emulatePersonalResourceDisplay = false,
 
 	-- Spacing between icons like combo points, arcane orbs, soul shards, etc.
 	classIconSpacing = 4
@@ -15,9 +15,9 @@ C["uf"] = {
 
 C["uf"].size = {
 	primary = {
-		width = 155,
-		health = 12,
-		power = 3,
+		width = 200,
+		health = 40,
+		power = 10,
 	},
 	secondary = {
 		width = 135,
@@ -35,8 +35,8 @@ C["uf"].size = {
 }
 
 C["uf"].positions = {
-	Player = { "CENTER", UIParent, "CENTER", 0, -275 }, -- Unused if emulatePersonalResourceDisplay is set
-	Target = { "TOPLEFT", "oUF_sInterfacePlayer", "TOPRIGHT", 55, 130 },
+	Player = { "TOPRIGHT", "sInterfaceActionBar3", "TOPLEFT", -10, 0 }, -- Unused if emulatePersonalResourceDisplay is set
+	Target = { "TOPLEFT", "sInterfaceActionBar3", "TOPRIGHT", 78, 0 },
 	Targettarget = { "TOPLEFT", "oUF_sInterfaceTarget", "TOPRIGHT", 7, 0 },
 	Focus = { "TOPLEFT", "oUF_sInterfacePlayer", "TOPRIGHT", 56, -100 },
 	Focustarget = { "TOPLEFT", "oUF_sInterfaceFocus", "TOPRIGHT", 7, 0 },
