@@ -3,10 +3,10 @@ local C = ns.C
 
 C["actionbars"] = {
 	enabled = true,
-	scale = 1,
+	scale = 0.9,
 
 	bar1 = { -- sInterfaceActionBar1
-		position = { "CENTER", UIParent, "BOTTOM", 0, 200},
+		position = { "BOTTOM", UIParent, "BOTTOM", 0, 200},
 		visibility = "show",
 		two_rows = false,
 	},
@@ -53,7 +53,7 @@ C["actionbars"] = {
 
 	stancebar = { --sInterfaceStanceBar
 		position = { "TOPLEFT", "sInterfacePetBar", "BOTTOMLEFT", 0, -20},
-		visibility = "hide",
+		visibility = "show",
 	},
 
 	overridebar = { --sInterfaceOverrideBar

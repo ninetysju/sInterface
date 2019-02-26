@@ -7,10 +7,10 @@ local oUF = ns.oUF or oUF
 local _, class = UnitClass('player')
 
 local CASTBAR_X_OFFSET = 0
-local CASTBAR_Y_OFFSET = 0
+local CASTBAR_Y_OFFSET = 20
 
 local POWER_X_OFFSET = 0
-local POWER_Y_OFFSET = 1
+local POWER_Y_OFFSET = 0
 
 local CLASSPOWER_X_OFFSET = 0
 local CLASSPOWER_Y_OFFSET = 0

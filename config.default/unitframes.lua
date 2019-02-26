@@ -20,9 +20,9 @@ C["uf"].size = {
 		power = 10,
 	},
 	secondary = {
-		width = 135,
-		health = 12,
-		power = 3,
+		width = 200,
+		health = 20,
+		power = 5,
 	},
 	tertiary = {
 		width = 56,
