@@ -317,7 +317,14 @@ local PostCastStart = function(self, unit)
 		anchor = parent
 	end
 
-	self.Icon:SetPoint("TOPLEFT", anchor, "BOTTOMLEFT", CASTBAR_X_OFFSET, -CASTBAR_Y_OFFSET)
+	-- self.Icon:SetPoint("TOPLEFT", anchor, "BOTTOMLEFT", CASTBAR_X_OFFSET, -CASTBAR_Y_OFFSET)
+
+	if unit ~= 'self' then
+		self.Icon:SetPoint("CENTER", "sInterfaceActionBar1", "CENTER", -sInterfaceActionBar1:GetWidth() / 2 + 45, 100)
+	end
+	if unit ~= 'player' then
+		self.Icon:SetPoint("CENTER", UIParent, "TOP", -sInterfaceActionBar1:GetWidth() / 2 + 45, -100)
+	end
 end
 
 local PostCastStop = function(self)
@@ -392,7 +399,7 @@ local Castbar = function(self, unit)
 	local iconSize = (cbHeight+textHeight)-TEXT_Y_OFFSET
 	cb.Icon:SetSize(iconSize, iconSize)
 	cb.Shield:SetSize(cbHeight*5.25, cbHeight*5.25)
-	cb:SetSize(self:GetWidth()-iconSpacing-iconSize, cbHeight)
+	cb:SetSize(sInterfaceActionBar1:GetWidth()-iconSpacing-iconSize, cbHeight)
 	self.Castbar = cb
 end
 
