@@ -6,7 +6,7 @@ C["actionbars"] = {
 	scale = 0.9,
 
 	bar1 = { -- sInterfaceActionBar1
-		position = { "BOTTOM", UIParent, "BOTTOM", 0, 200},
+		position = { "CENTER", UIParent, "BOTTOM", -30, 200},
 		visibility = "show",
 		two_rows = false,
 	},
@@ -33,7 +33,7 @@ C["actionbars"] = {
 	},
 
 	bar5 = { --sInterfaceActionBar5
-		position = { "BOTTOM", UIParent, "BOTTOM", 8, 8},
+		position = { "BOTTOM", UIParent, "BOTTOM", -22, 8},
 		visibility = "show",
 		two_rows = false,
 		enabled = true,

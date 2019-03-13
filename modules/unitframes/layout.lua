@@ -320,10 +320,10 @@ local PostCastStart = function(self, unit)
 	-- self.Icon:SetPoint("TOPLEFT", anchor, "BOTTOMLEFT", CASTBAR_X_OFFSET, -CASTBAR_Y_OFFSET)
 
 	if unit ~= 'self' then
-		self.Icon:SetPoint("CENTER", "sInterfaceActionBar1", "CENTER", -sInterfaceActionBar1:GetWidth() / 2 + 45, 100)
+		self:SetPoint("CENTER", UIParent, "CENTER", 0, -260)
 	end
 	if unit ~= 'player' then
-		self.Icon:SetPoint("CENTER", UIParent, "TOP", -sInterfaceActionBar1:GetWidth() / 2 + 45, -100)
+		self:SetPoint("CENTER", UIParent, "TOP", 0, -100)
 	end
 end
 
@@ -347,7 +347,7 @@ local CustomTimeText = function(self, duration)
 end
 
 local Castbar = function(self, unit)
-	local iconSpacing = 6
+	-- local iconSpacing = 0
 	local cb = createStatusbar(self, C.general.texture, nil, nil, nil, 1, 1, 1, 1)
 
 	cb.Time = cb:CreateFontString("sInterface_CastBarTime", "ARTWORK", "GameFontHighlightOutline")
@@ -366,14 +366,14 @@ local Castbar = function(self, unit)
 	cb.FailColor = {1.0, 0.09, 0}
 	cb.ChannelingColor = {0.32, 0.3, 1}
 
-	cb.Icon = cb:CreateTexture(nil, 'ARTWORK')
-	cb.Icon:SetTexCoord(.1, .9, .1, .9)
+	-- cb.Icon = cb:CreateTexture(nil, 'ARTWORK')
+	-- cb.Icon:SetTexCoord(.1, .9, .1, .9)
 
-	cb:SetPoint("BOTTOMLEFT", cb.Icon, "BOTTOMRIGHT", iconSpacing, 0)
+	-- cb:SetPoint("BOTTOMLEFT", cb.Icon, "BOTTOMRIGHT", iconSpacing, 0)
 
 	cb.Shield = cb:CreateTexture(nil, 'ARTWORK')
 	cb.Shield:SetTexture[[Interface\CastingBar\UI-CastingBar-Arena-Shield]]
-	cb.Shield:SetPoint('CENTER', cb.Icon, 'CENTER', 7, 0)
+	-- cb.Shield:SetPoint('CENTER', cb.Icon, 'CENTER', 7, 0)
 
 	cb.Spark = cb:CreateTexture(nil,'OVERLAY')
 	cb.Spark:SetBlendMode('Add')
@@ -390,16 +390,16 @@ local Castbar = function(self, unit)
 	cb.timeToHold = 0.75
 
 	E:ShadowedBorder(cb)
-	E:ShadowedBorder(cb.Icon)
+	-- E:ShadowedBorder(cb.Icon)
 
 	E:RegisterAlphaAnimation(cb)
 
 	local cbHeight = self.Health:GetHeight()/CASTBAR_HEIGHT_RATIO
 	local textHeight = cb.Text:GetStringHeight();
-	local iconSize = (cbHeight+textHeight)-TEXT_Y_OFFSET
-	cb.Icon:SetSize(iconSize, iconSize)
+	-- local iconSize = (cbHeight+textHeight)-TEXT_Y_OFFSET
+	-- cb.Icon:SetSize(iconSize, iconSize)
 	cb.Shield:SetSize(cbHeight*5.25, cbHeight*5.25)
-	cb:SetSize(sInterfaceActionBar1:GetWidth()-iconSpacing-iconSize, cbHeight)
+	cb:SetSize(sInterfaceActionBar1:GetWidth() + 18, cbHeight)
 	self.Castbar = cb
 end
 

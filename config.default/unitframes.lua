@@ -56,8 +56,8 @@ C["uf"].aura = {
 	},
 	target = {
 		enable = true,
-		mode = "aura",
-		size = 18
+		mode = "debuff",
+		size = 50
 	},
 	party = {
 		enable = false,
